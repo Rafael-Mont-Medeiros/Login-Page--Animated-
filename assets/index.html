@@ -12,38 +12,78 @@
 
         <form class="login-form">
 
-            <h2 class="login-title">Sing In</h2>
+            <div class="login-area">
+                <h2 class="login-title">Sing In</h2>
 
-            <div class="social">
-                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+    
+                <p>Or use your email password</p>
+    
+                <div class="inputs">
+                    <input type="email" placeholder="Your email">
+                    <input type="password" placeholder="Your password">
+                </div>
+    
+                <p>Forget your password ?</p>
+                <button type="button">Sing In</button>
             </div>
 
-            <p>Or use your email password</p>
-
-            <div class="inputs">
-                <input type="email" placeholder="Your email">
-                <input type="password" placeholder="Your password">
+            <div class="register-area">
+                <div class="register-content">
+                    <h2 class="register-area-title title2">Hello,Friend!</h2>
+                    <p>
+                        register with your personal details to use alll of site features.
+                    </p>
+                    <button type="button" class="sing-up-btn" onclick="singInBtn()">
+                        Sing Up
+                    </button>
+                </div>
             </div>
-
-            <p>Forget your password ?</p>
-            <button type="button">Sing In</button>
-
         </form>
 
-        <div class="register-area">
-            <div class="register-content">
-                <h2 class="register-area-title title2">Hello,Friend!</h2>
-                <p>
-                    register with your personal details to use alll of site features.
-                </p>
-                <button type="button" class="sing-up-btn" onclick="singUpBtn()">
-                    Sing Up
-                </button>
+        
+        <form class="register-form">
+
+            <div class="login-area">
+                <h2 class="login-title">Create account</h2>
+
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+    
+                <p>Or use your email password</p>
+    
+                <div class="inputs">
+                    <input type="text" placeholder="Your name">
+                    <input type="email" placeholder="Your email">
+                    <input type="password" placeholder="Your password">
+                </div>
+    
+                <p>Forget your password ?</p>
+                <button type="button" onclick="singUpBtn()">Sing Up</button>
             </div>
-        </div>
+
+            <div class="register-area">
+                <div class="register-content">
+                    <h2 class="register-area-title title2">Welcome back!</h2>
+                    <p>
+                        Enter your personal detalls to use all of site features.
+                    </p>
+                    <button type="button" class="sing-in-btn">
+                        Sing In
+                    </button>
+                </div>
+            </div>
+        </form>
+
     </div>
 </body>
 

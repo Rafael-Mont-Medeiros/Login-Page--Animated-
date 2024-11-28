@@ -17,39 +17,39 @@ body{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     display: flex;
     background-color: #fff;
-    position: absolute;
+    position: relative;
     overflow: hidden;
+    width: 700px;
     /* background: linear-gradient(#544DB5,#533BAE ); */
 }
 
-.login-form{
-    display: flex;
-    z-index: 1;
-    height: inherit;
-    background-color: #fff;
 
-}
-
-.login-area{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.login-area p {
-    color: rgba(0, 0, 0, 0.75);
+.first-content {
+    padding: 30px;
 }
 
 h2{
     font-size: 2rem;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
-.login-title{
-    margin-bottom: 15px;
+p,
+a {
+    color: rgba(0, 0, 0, 0.75);
 }
 
-.social i{
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-media{
+    display: flex;
+    list-style-type: none;
+}
+
+.social-media i{
     padding: 10px;
     border: 2px solid #DFE1E5;
     border-radius: 5px;
@@ -58,14 +58,8 @@ h2{
     transition: .5s;
 }
 
-.social i:hover{
+.social-media i:hover{
     transform: scale(1.1);
-}
-
-.login-area,
-.register-area{
-    padding: 50px 25px;
-    flex: 1;
 }
 
 .inputs{
@@ -84,8 +78,7 @@ h2{
     border-radius: 8px;
 }
 
-.register-form button,
-.login-form button{
+.first-content button{
     padding: 8px;
     width: 50%;
     border: none;
@@ -98,61 +91,46 @@ h2{
     transition: .5s;
 }
 
-.register-area{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 100px 0 0 70px;
-    background:linear-gradient(to right, #5752B8,#2904ac);;
-}
-
-.register-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 25px;
-    text-align: center;
-}
-
-.register-content h2,
-.register-content p{
-    color: #fff;
-}
-
-.register-content p{
-    font-size: 14px;
-}
-
-.register-content button{
-    padding: 8px;
-    width: 50%;
-    border: 1px solid #fff;
-    background-color: transparent;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 15px 0 15px 0;
-    color: #fff;
-    font-weight: 600;
-    transition: .5s;
-}
-
-.login-area button:hover,
-.register-content button:hover{
+.first-content button:hover,
+.second-column button:hover{
     transform: scale(1.1);
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
-.register-form{
+.first-column {
     display: flex;
-    position: absolute;
-    z-index: 0;
-    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    flex: 1;
 }
 
-.register-form .animation{
-    z-index: 1;
+.social-media a:not(:first-child){
+    margin-left: 5px;
 }
 
-.login-form .animation{
-    z-index: 0;
+.second-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    margin: 30px;
+    padding: 30px;
+    border: 1px solid red;
+    /* border-radius: 100px 0 0 70px; */
+    /* background:linear-gradient(to right, #5752B8,#2904ac); */
+}
+
+.second-column button{
+    padding: 8px;
+    width: 50%;
+    border: 1px solid #000;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 15px 0 15px 0;
+    color: #000;
+    font-weight: 600;
+    transition: .5s;
 }

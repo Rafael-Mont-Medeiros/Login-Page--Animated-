@@ -20,23 +20,40 @@ body{
     position: relative;
     overflow: hidden;
     width: 700px;
+    height: 450px;
     /* background: linear-gradient(#544DB5,#533BAE ); */
 }
 
 
 .first-content {
-    padding: 30px;
+    display: flex;
+    
 }
+
+
+#container::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    transform: translateX(100%);
+    border-radius: 100px 0 0 70px;
+    background:linear-gradient(to right, #5752B8,#2904ac); 
+    z-index: 5;
+}
+
 
 h2{
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 20px;
+    cursor:default;
 }
 
 p,
 a {
     color: rgba(0, 0, 0, 0.75);
+    cursor: default;
 }
 
 a{
@@ -78,20 +95,22 @@ a{
     border-radius: 8px;
 }
 
-.first-content button{
+.first-content button,
+.second-content .first-column button{
     padding: 8px;
     width: 50%;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     margin: 15px 0 15px 0;
-    color: #fff;
+    color: #000;
     font-weight: 600;
     background:linear-gradient(to right, #5752B8,#2904ac);
     transition: .5s;
 }
 
 .first-content button:hover,
+.second-content button:hover,
 .second-column button:hover{
     transform: scale(1.1);
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
@@ -102,7 +121,7 @@ a{
     flex-direction: column;
     align-items: center;
     padding: 30px;
-    flex: 1;
+    width: 350px;
 }
 
 .social-media a:not(:first-child){
@@ -114,18 +133,14 @@ a{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    flex: 1;
-    margin: 30px;
-    padding: 30px;
-    border: 1px solid red;
-    /* border-radius: 100px 0 0 70px; */
-    /* background:linear-gradient(to right, #5752B8,#2904ac); */
+    width: 350px;
+    z-index: 6;
 }
 
-.second-column button{
+.first-content .second-column button{
     padding: 8px;
     width: 50%;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     background-color: transparent;
     cursor: pointer;
     border-radius: 5px;
@@ -133,4 +148,26 @@ a{
     color: #000;
     font-weight: 600;
     transition: .5s;
+    margin: 15px auto 0 auto;
+}
+
+.description{
+    padding: 25px;
+    font-weight: lighter;
+}
+
+.second-title,
+.description{
+    color: #000;
+}
+
+.second-content {
+    display: none;
+}
+
+.second-content .first-column{
+    order: 2;
+}
+.second-content .second-column{
+    order: 1;
 }

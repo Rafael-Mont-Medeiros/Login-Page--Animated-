@@ -36,8 +36,8 @@ body{
     position: absolute;
     height: 100%;
     width: 50%;
-    transform: translateX(100%);
-    border-radius: 100px 0 0 70px;
+    transform: translateX(100%); 
+    /*border-radius: 100px 0 0 70px;*/
     background:linear-gradient(to right, #5752B8,#2904ac); 
     z-index: 5;
 }
@@ -182,42 +182,71 @@ a:hover{
 }
 
 .sing-up-js .content::before{
-    transform: translateX(0);
-    border-radius: 0 100px 70px 0;
-    animation: transferAnimation 3s;
+    transform: translateX(0); 
+    animation: singUpAnimation 2s;
 }
 
+.sing-in-js .content::before{
+    animation: singInAnimation 2s;
+}
 
 .sing-up-js .second-content{
     position: absolute;
     display: flex;
 }
 
-.sing-up-js .second-content .first-column,
+.sing-up-js .second-content .first-column{
+    z-index: 4;
+}
 .sing-up-js .second-content .second-column{
     z-index: 5;
 }
 
-.sing-in-js .first-content .first-column,
+.sing-in-js .first-content .first-column{
+    z-index: 4;
+}
 .sing-in-js .first-content .second-column{
     z-index: 5;
 }
 
 /* animation (@keyframes) */
 
-/* @keyframes transferAnimation {
+@keyframes singUpAnimation {
     from {
         transform: translateX(100%);
         width: 50%;
-    }
-
-    50%{
-        transform: translateX(50%);
-        width: 5%;
+        border-radius: 0;
     }
 
     to{
         transform: translateX(0);
         width: 50%;
     }
-} */
+}
+
+@keyframes singInAnimation {
+    from {
+        transform: translateX(100%);
+        width: 50%;
+    }
+
+    /* 50%{
+        transform: translateX(50%);
+        width: 5%;
+    } */
+
+    to{
+        transform: translateX(0);
+        width: 50%;
+    }
+}
+
+@keyframes singInAnimation{
+    from {
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(100%);
+    }
+}

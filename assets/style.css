@@ -31,7 +31,7 @@ body{
 }
 
 
-#container::before{
+.content::before{
     content: '';
     position: absolute;
     height: 100%;
@@ -59,6 +59,12 @@ a {
 a{
     text-decoration: none;
     font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+}
+
+a:hover{
+    opacity: .8;
 }
 
 .social-media{
@@ -103,7 +109,7 @@ a{
     cursor: pointer;
     border-radius: 5px;
     margin: 15px 0 15px 0;
-    color: #000;
+    color: #fff;
     font-weight: 600;
     background:linear-gradient(to right, #5752B8,#2904ac);
     transition: .5s;
@@ -134,10 +140,11 @@ a{
     justify-content: center;
     text-align: center;
     width: 350px;
-    z-index: 6;
+    /* z-index: 6; */
 }
 
-.first-content .second-column button{
+.first-content .second-column button,
+.second-btn{
     padding: 8px;
     width: 50%;
     border: 1px solid #fff;
@@ -145,7 +152,7 @@ a{
     cursor: pointer;
     border-radius: 5px;
     margin: 15px 0 15px 0;
-    color: #000;
+    color: #fff;
     font-weight: 600;
     transition: .5s;
     margin: 15px auto 0 auto;
@@ -158,12 +165,9 @@ a{
 
 .second-title,
 .description{
-    color: #000;
+    color: #fff;
 }
 
-.second-content {
-    display: none;
-}
 
 .second-content .first-column{
     order: 2;
@@ -171,3 +175,49 @@ a{
 .second-content .second-column{
     order: 1;
 }
+
+.sing-up-js .first-content .first-column,
+.sing-up-js .first-content .second-column{
+   z-index: -1;
+}
+
+.sing-up-js .content::before{
+    transform: translateX(0);
+    border-radius: 0 100px 70px 0;
+    animation: transferAnimation 3s;
+}
+
+
+.sing-up-js .second-content{
+    position: absolute;
+    display: flex;
+}
+
+.sing-up-js .second-content .first-column,
+.sing-up-js .second-content .second-column{
+    z-index: 5;
+}
+
+.sing-in-js .first-content .first-column,
+.sing-in-js .first-content .second-column{
+    z-index: 5;
+}
+
+/* animation (@keyframes) */
+
+/* @keyframes transferAnimation {
+    from {
+        transform: translateX(100%);
+        width: 50%;
+    }
+
+    50%{
+        transform: translateX(50%);
+        width: 5%;
+    }
+
+    to{
+        transform: translateX(0);
+        width: 50%;
+    }
+} */

@@ -21,7 +21,6 @@ body{
     overflow: hidden;
     width: 700px;
     height: 450px;
-    /* background: linear-gradient(#544DB5,#533BAE ); */
 }
 
 
@@ -37,7 +36,6 @@ body{
     height: 100%;
     width: 50%;
     transform: translateX(100%); 
-    /*border-radius: 100px 0 0 70px;*/
     background:linear-gradient(to right, #5752B8,#2904ac); 
     z-index: 5;
 }
@@ -101,7 +99,7 @@ a:hover{
     border-radius: 8px;
 }
 
-.first-content button,
+.first-content  button,
 .second-content .first-column button{
     padding: 8px;
     width: 50%;
@@ -140,11 +138,10 @@ a:hover{
     justify-content: center;
     text-align: center;
     width: 350px;
-    /* z-index: 6; */
 }
 
 .first-content .second-column button,
-.second-btn{
+.second-content .second-column .second-btn{
     padding: 8px;
     width: 50%;
     border: 1px solid #fff;
@@ -183,11 +180,13 @@ a:hover{
 
 .sing-up-js .content::before{
     transform: translateX(0); 
-    animation: singUpAnimation 2s;
+    border-radius: 0 90px 70px 0;
+    animation: singUpAnimation 1.5s;
 }
 
 .sing-in-js .content::before{
-    animation: singInAnimation 2s;
+    border-radius: 90px 0 0 70px ;
+    animation: singInAnimation 1.5s;
 }
 
 .sing-up-js .second-content{
@@ -224,26 +223,10 @@ a:hover{
     }
 }
 
-@keyframes singInAnimation {
-    from {
-        transform: translateX(100%);
-        width: 50%;
-    }
-
-    /* 50%{
-        transform: translateX(50%);
-        width: 5%;
-    } */
-
-    to{
-        transform: translateX(0);
-        width: 50%;
-    }
-}
-
 @keyframes singInAnimation{
     from {
         transform: translateX(0);
+        border-radius: 0;
     }
 
     to{
